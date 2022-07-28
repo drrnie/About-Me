@@ -1,0 +1,104 @@
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    transition: 0.5s;
+}
+body{
+    /* margin: 0; */
+    height: 100%;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+.content{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-content: space-between;
+    align-content: space-between;
+    justify-content: space-between;
+    background: linear-gradient(to right, #e6d1d8ad, #d0b0b1a4, #9f807d96, #39707a52, #fff1d788);
+    background-size: 400% 400%;
+    background-position: relative;
+    text-align: center;
+    animation: gradient 10s ease-in-out infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.content div{
+    flex: 1;
+    text-align: center;
+    margin: 1.5em;
+}
+
+.content div:nth-of-type(1n+2){
+    margin-left: 20px;
+}
+
+.vital-stats{
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-content: space-between;
+    align-content: space-between;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.vital-stats div{
+    flex: 1;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.button{
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 16px;   
+}
+
+.button:hover{
+    background-color: #010028;
+    color: white;
+    border: 2px solid #feeed4;
+    transition: .5s;
+}
+
+.buttons{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-content: center;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.buttons div{
+    margin: 5em;
+}
+
+#vitals, #dreams, #passion{
+    width: 150px;
+    height: 150px;
+}
+
+#filler{
+    color: transparent;
+}
